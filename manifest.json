@@ -1,0 +1,24 @@
+{
+  "name": "VKThemeExt",
+  "description": "Change vk theme how do you want",
+  "permissions": [  "tabs", "contextMenus", "storage", "webRequest", "scripting"],
+  "host_permissions": ["*://vk.com/*", "*://m.vk.com/*"],
+  "optional_permissions": [ "activeTab" ],
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_icon": {
+      "128": "./favicon.png"
+    },
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "128": "./favicon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://vk.com/*", "*://m.vk.com/*"],
+      "js": ["script.js"]
+    }
+  ]
+}
